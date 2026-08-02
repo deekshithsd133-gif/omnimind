@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            font-family:Arial;
+        }
+        form{
+            display:flex;
+            flex-direction:column;
+            width:300px;
+        }
+        input, textarea, button{
+            margin:10px;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Contact Us</h2>
+
+<form method="POST" onsubmit="return validateForm()">
+    <input type="text" id="name" name="name" placeholder="Enter Name">
+    <textarea id="message" name="message" placeholder="Enter Message"></textarea>
+    <button type="submit">Submit</button>
+</form>
+
+<h3>Messages</h3>
+<ul>
+{% for c in contacts %}
+<li>{{ c.name }} - {{ c.message }}</li>
+{% endfor %}
+</ul>
+
+<script src="script.js"></script>
+
+</body>
+</html>

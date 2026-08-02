@@ -1,0 +1,33 @@
+# --- Web / API ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+websockets
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+cryptography
+aiosqlite
+sqlalchemy
+pydantic-settings
+
+# --- Testing ---
+pytest
+pytest-asyncio
+httpx
+
+# --- Computer vision / AI ---
+# torch/torchvision installed separately with a CUDA-matched index URL, see README.
+# IMPORTANT: install with --no-deps first, then `pip install protobuf<5 absl-py
+# flatbuffers sounddevice attrs` — mediapipe>=0.10.18 dropped the legacy
+# `mediapipe.solutions` API (FaceMesh/FaceDetection) this project depends on,
+# and letting pip free-resolve mediapipe's full dependency tree (incl. jax/
+# jaxlib) against the already-installed torch/numpy can hang for a very long
+# time. See README "What's real vs. best-effort" / troubleshooting notes.
+mediapipe==0.10.14
+ultralytics
+facenet-pytorch
+supervision
+opencv-python-headless
+numpy
+Pillow
+bcrypt==4.0.1  # newer bcrypt (4.1+) breaks passlib's bundled self-test

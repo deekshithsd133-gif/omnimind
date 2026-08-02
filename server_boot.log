@@ -1,0 +1,11 @@
+======================================================================
+  Omni Mind ATM Security System
+  Local:  https://127.0.0.1:8420
+  Mobile (same WiFi): https://10.149.195.208:8420
+  NOTE: your browser will warn 'connection is not private' the
+        first time — this is expected for a self-signed LAN
+        certificate. Tap Advanced -> Proceed to continue.
+  Default logins: admin/admin123, operator/operator123
+======================================================================
+2026-07-18 00:25:29 | INFO     | omni_mind.main | Starting Omni Mind â€” atm_id=ATM-001
+2026-07-18 00:25:29 | INFO     | omni_mind.database | Database writer thread started

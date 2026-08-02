@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+logs/*.log
+database/*.db
+database/*.db-journal
+evidence/
+.env
+*.key
+models/weights/yolo11n.pt
+.pytest_cache/
